@@ -18,14 +18,14 @@
       <table class="table">
         <thead>
           <tr>
-            <th>#</th>
+            <th>#ss</th>
             <th>Title</th>
             <th>Description</th>
             <th>State</th>
             <th>Level</th>
 	    <th>Create date</th>
             <th>Owner</th>
-            <th>Assigned user</th>
+            <th>Assignee</th>
           </tr>
         </thead>
         <tbody>
