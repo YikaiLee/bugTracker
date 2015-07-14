@@ -25,7 +25,7 @@
             <th>Level</th>
 	    <th>Create date</th>
             <th>Owner</th>
-            <th>Assignee</th>
+            <th>Assigned user</th>
           </tr>
         </thead>
         <tbody>

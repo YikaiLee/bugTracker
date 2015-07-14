@@ -22,9 +22,9 @@ class Bug(models.Model):
         default=datetime.now)
     
     STATE_CHOICES = (
-        ('open', 'open'),
-        ('assigned', 'assigned'),
-        ('closed', 'close'),
+        ('open', 'OPEN'),
+        ('assigned', 'ASSIGNED'),
+        ('closed', 'CLOSED'),
     )
     state = models.CharField(max_length=20, choices=STATE_CHOICES)
 

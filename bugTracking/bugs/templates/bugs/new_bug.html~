@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% load i18n widget_tweaks %}
 
-{% block title %}New Bug{% endblock %}
+{% block title %}Log in{% endblock %}
 {% block extrastyle %}
 
 {% endblock %}

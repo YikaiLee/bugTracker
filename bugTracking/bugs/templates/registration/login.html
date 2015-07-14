@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% load i18n widget_tweaks %}
 
-{% block title %}New Bug{% endblock %}
+{% block title %}Log in{% endblock %}
 {% block extrastyle %}
 
 {% endblock %}
@@ -10,10 +10,16 @@
   <link rel="stylesheet" href="signup/signup.css">
   <br>
 <div class="container" id="wrap">
-	  <div class="row">
+    <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            
-            <form action="/newbug/" method="post" accept-charset="utf-8" class="form" role="form">{% csrf_token %}   <legend>New Bug</legend>
+     {% if form.errors  %}
+	 {% for error in  form.errors %}
+	    {% if error == '__all__'%}
+            	<font color='red'><p>Your username and password didn't match. Please try again.</p></fornt>
+            {%endif%}
+         {% endfor %} 
+     {% endif %}       
+            <form method="post" action="{% url 'django.contrib.auth.views.login' %}" accept-charset="utf-8" class="form" role="form">{% csrf_token %}   <legend>Log in</legend>
               {% csrf_token %}
                 {% for field in form %}
                     {% if field.errors %}
@@ -52,4 +58,3 @@
     </div>
 </div>
     {% endblock %}
-
